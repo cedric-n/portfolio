@@ -1,11 +1,29 @@
 @import "~bootstrap/scss/bootstrap";
+@import "variables.scss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap');
 
 body {
     background-color: lightgray;
 }
 
-h1 {
-    color: red;
+p,
+a,
+button,
+td,
+th,
+span,
+li
+{
+    font-family: 'Roboto', sans-serif;
 }
 
-$primary: darken(#428bca, 20%);
+h1,
+h2,
+h3,
+h4,
+h5
+{
+    font-family: 'Signika Negative', sans-serif;
+}
+
