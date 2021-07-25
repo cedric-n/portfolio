@@ -1,0 +1,48 @@
+{% block stylesheets %}
+    {{ encore_entry_link_tags('nav') }}
+{% endblock %}
+
+<nav class="navbar navbar-expand-lg navbar-light ">
+    <div id="nav-profil" class="container-fluid d-flex flex-column w-100">
+        <div class="firstDivNav row w-100 ">
+            <div id="profil" class="col-md-6 col-sm-12 d-flex ">
+                <div id="info-profil" class="">
+                    <h1>Cédric N'GONDO</h1>
+                    <div class="d-lg-inline-flex">
+                        <img id="img-profil" src="{{ asset('build/images/profil.jpeg') }}" alt="profil" width="160" height="154">
+                        <button class="button-description button-style btn btn-sm" type="button" data-toggle="collapse" data-target="#collapseDescription" aria-expanded="false" aria-controls="collapseDescriptioon">
+                            Voir la description
+                        </button>
+                        <p id="collapseDescription" class="profil-description collapse navbar-collapse w-100">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id consectetur dolor, a maximus urna. Sed augue arcu, bibendum ac nisl tempus, blandit pellentesque dolor. Sed justo nisl, dictum et hendrerit aliquet, tristique non nisl. Cras aliquet eget nisi et dictum. Morbi egestas a purus vitae fermentum. Proin convallis tortor sed consequat fringilla.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="competence-langage" class="col-md-6 col-sm-12 ">
+            </div>
+        </div>
+        <div class="button-menu-bars py-2 w-100 text-center">
+            <button class="navbar-toggler button-style" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+        <div class="list-section collapse navbar-collapse w-100" id="navbarNav">
+            <ul id="" class="list container-lg justify-content-lg-around align-items-center navbar-nav w-100">
+                    <li class="nav-item ">
+                        <a class="nav-link "  href="#">Compétences</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link " href="#">Réalisations</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">Experiences</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="#">Formations</a>
+                    </li>
+                </ul>
+        </div>
+
+    </div>
+</nav>

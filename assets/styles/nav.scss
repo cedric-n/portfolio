@@ -1,0 +1,79 @@
+@import "app.scss";
+
+
+.firstDivNav {
+  background-color: rgba(38,29,67,0.6);
+}
+
+.list-section {
+  background-color: rgba(90,67,113,1);
+}
+
+.button-menu-bars {
+  background-color: rgba(23,14,24,0.8);
+}
+
+#profil {
+  padding: $spacing;
+}
+
+#img-profil {
+  float: left;
+  margin-right: 8px;
+}
+
+.button-description {
+  margin-bottom: 8px;
+}
+
+.profil-description {
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+#nav-profil {
+  padding: 8px 8px 0 8px;
+}
+
+.list, .navbar {
+  margin: 0;
+  padding: 0;
+}
+
+.list li {
+  width: 80%;
+  text-align: center;
+  margin: 8px 0;
+  font-weight: bold;
+}
+
+.list li:hover {
+  background-color: rgba(255,255,255,0.50);
+}
+
+@media screen and (min-width: 992px){
+
+  #info-profil {
+    margin-left: $spacing2;
+  }
+
+  .firstDivNav:hover ~ .list-section .list a, .button-menu-bars, .button-description {
+    display: none;
+  }
+
+  .firstDivNav:hover ~ .list-section .list {
+    height: 0;
+    width: 100%;
+  }
+
+  .firstDivNav ~ .list-section .list {
+    height:50px;
+    transition: height 1s;
+  }
+
+  .list {
+    margin: 0 auto;
+  }
+
+}
+

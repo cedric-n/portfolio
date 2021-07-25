@@ -1,7 +1,22 @@
-$primary: darken(#428bca, 20%);
+:root {
+  --mulled-wine: #5a4371;
+  --cashmere: #e5b19c;
+  --port-gore: #261d43;
+  --cinder: #170e18;
+  --bouquet: #a57e99;
+  --strikemaster: #946682;
+  --deluge: #8a69a4;
+  --del-rio: #b49c9c;
+  --contessa: #bc6475;
+  --sandy-brown: #ef955c;
+}
+
+
 
 $spacing: 8px;
 $spacing2: $spacing * 2;
 $spacing3: $spacing * 3;
 $spacing4: $spacing * 4;
 $spacing5: $spacing * 5;
+
+@import "~bootstrap/scss/bootstrap";
