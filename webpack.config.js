@@ -35,6 +35,7 @@ Encore
      */
     .addEntry('app', './assets/styles/app.scss')
     .addEntry('nav', './assets/styles/nav.scss')
+    .addEntry('foot', './assets/styles/foot.scss')
     .addEntry('appJs', './assets/js/app.js')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
