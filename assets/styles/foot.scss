@@ -1,0 +1,28 @@
+@import "app.scss";
+
+.footer-content {
+  background-color: rgba(38,29,67,0.8);
+}
+
+.foot-content-link ul li {
+  list-style: none;
+  margin: $spacing $spacing4;
+}
+
+.foot-content-link ul li a {
+  color: rgba(255,255,255,0.8);
+}
+
+.foot-content-link ul li a:hover {
+  font-weight: bold;
+  color: rgba(255,255,255,0.8);
+}
+
+.foot-content-link:nth-of-type(3) ul {
+  padding-right: $spacing4;
+}
+
+.foot-links {
+  text-decoration: none;
+  color: rgba(23,14,24,1);
+}
