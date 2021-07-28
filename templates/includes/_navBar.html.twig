@@ -2,6 +2,8 @@
     {{ encore_entry_link_tags('nav') }}
 {% endblock %}
 
+{% block nav %}
+
 <nav class="navbar navbar-expand-lg navbar-light ">
     <div id="nav-profil" class="container-fluid d-flex flex-column w-100">
         <div class="firstDivNav row w-100 ">
@@ -10,7 +12,7 @@
                     <h1>Cédric N'GONDO</h1>
                     <div class="d-lg-inline-flex">
                         <img id="img-profil" src="{{ asset('build/images/profil.jpeg') }}" alt="profil" width="160" height="154">
-                        <button class="button-description button-style btn btn-sm" type="button" data-toggle="collapse" data-target="#collapseDescription" aria-expanded="false" aria-controls="collapseDescriptioon">
+                        <button class="d-lg-none button-description button-style btn btn-sm" type="button" data-toggle="collapse" data-target="#collapseDescription" aria-expanded="false" aria-controls="collapseDescriptioon">
                             Voir la description
                         </button>
                         <p id="collapseDescription" class="profil-description collapse navbar-collapse w-100">
@@ -46,3 +48,5 @@
 
     </div>
 </nav>
+
+{% endblock %}
