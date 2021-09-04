@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Realisation{% endblock %}
+
+{% block body %}
+
+    <h1>Ajouter une nouvelle réalisation</h1>
+
+    {{ include('realisation/_form.html.twig') }}
+
+    <a href="{{ path('realisation_index') }}">back to list</a>
+{% endblock %}
