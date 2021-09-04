@@ -11,6 +11,10 @@ import '../styles/app.scss';
 // start the Stimulus application
 import '../bootstrap';
 
+require('bootstrap-datepicker/js/bootstrap-datepicker')
+require('bootstrap-datepicker/js/locales/bootstrap-datepicker.fr')
+require('bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css')
+
 const $ = require('jquery');
 // this "modifies" the jquery module: adding behavior to it
 // the bootstrap module doesn't export/return anything
@@ -24,3 +28,10 @@ $(document).ready(function() {
     $('[data-toggle="popover"]').popover();
 });
 */
+$(document).ready(function (){
+    $('.input-daterange input').each(function () {
+        $(this).datepicker({
+            format: 'dd/mm/YYYY'
+        });
+    });
+});

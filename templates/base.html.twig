@@ -19,13 +19,21 @@
     </head>
     <body>
         {% block nav %}
-            {% include 'includes/_navBar.html.twig' %}
+
         {% endblock %}
         {% block body %}
         {% endblock %}
 
         {% block footer %}
-            {% include 'includes/_footer.html.twig' %}
+
         {% endblock %}
+        <script>
+            $(document).ready(function() {
+                // you may need to change this code if you are not using Bootstrap Datepicker
+                $('.js-datepicker').datepicker({
+                    format: 'dd/MM/yyyy'
+                });
+            });
+        </script>
     </body>
 </html>
