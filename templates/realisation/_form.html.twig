@@ -1,0 +1,37 @@
+{% block stylesheets %}
+    {{ encore_entry_link_tags('form') }}
+{% endblock %}
+
+{{ form_start(form) }}
+    <div class="row">
+        <div class="col d-flex flex-column my-2">
+            {{ form_label(form.name) }}
+            {{ form_widget(form.name) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col d-flex flex-column my-2">
+            {{ form_label(form.category) }}
+            {{ form_widget(form.category) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col d-flex flex-column my-2">
+            {{ form_label(form.beginAt) }}
+            {{ form_widget(form.beginAt) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col d-flex flex-column my-2">
+            {{ form_label(form.posterFile) }}
+            {{ form_widget(form.posterFile) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col d-flex flex-column my-2">
+            {{ form_label(form.description) }}
+            {{ form_widget(form.description) }}
+        </div>
+    </div>
+    <button class="btn">{{ button_label|default('Ajouter') }}</button>
+{{ form_end(form) }}
