@@ -1,0 +1,14 @@
+@import "app.scss";
+
+table.table {
+  width: 80%;
+  margin: 0 auto;
+}
+
+td, th {
+  border: 0 solid;
+}
+
+img {
+  width: $spacing3 * 10;
+}
