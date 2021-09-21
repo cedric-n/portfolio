@@ -23,7 +23,7 @@ class AppFixtures extends Fixture
             $realisation->setCategory('category_' . $i);
             $realisation->setBeginAt($date);
             $realisation->setDescription('description' . $i);
-            $realisation->setPosterFile(null);
+            $realisation->setPosterFile();
             $manager->persist($realisation);
         }
 
