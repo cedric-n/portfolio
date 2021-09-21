@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('index') }}
+{% endblock %}
+
+{% block title %}Realisation index{% endblock %}
+
+{% block body %}
+    <h1>Realisation index</h1>
+
+    <table id="table-index" class="table table-responsive table-striped table-hover w-75 mx-auto">
+        <caption>Liste des realisations</caption>
+        <thead class="table-primary">
+            <tr class="text-center">
+                <th>#Id</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Commencé le</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for realisation in realisations %}
+            <tr class="text-center align-middle">
+                <td>{{ realisation.id }}</td>
+                <td>{{ realisation.name }}</td>
+                <td>{{ realisation.category }}</td>
+                <td>{{ realisation.beginAt ? realisation.beginAt|date('d/m/Y') : '' }}</td>
+                <td>
+                    <a class="btn btn-info" href="{{ path('realisation_show', {'id': realisation.id}) }}">show</a>
+                    <a class="btn btn-warning" href="{{ path('realisation_edit', {'id': realisation.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('realisation_new') }}">Create new</a>
+{% endblock %}
