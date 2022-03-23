@@ -1,0 +1,188 @@
+@import './app.scss';
+
+
+ nav, .nav-content, li.nav-section, li.nav-connexion, .section-nav, ul.list, .connexion-nav, .list, .title-nav-content, div.button-menu-bars{
+  display: flex;
+  align-items: center;
+  
+}
+
+nav, .nav-content, li.nav-section, li.nav-connexion, .section-nav, ul.list, .connexion-nav, .list  {
+  justify-content: center;
+}
+
+.nav-content {
+  width: 20%;
+}
+
+div.nav-section {
+  width: 80%;
+}
+
+.nav-content, li.nav-section a {
+  width: 100%;
+}
+
+nav {
+  background-color: var(--fourth-color);
+}
+
+h1 {
+  color: var(--third-color);
+}
+a.nav-link {
+  color: var(--first-color);
+}
+
+ul.list li::before{
+  border-right: 1px solid black;
+}
+
+ul.list li:hover{
+  background-color: var(--third-color) ;
+  color: var(--fifth-color);
+}
+
+div.list-section, div.button-menu-bars {
+  display: none;
+}
+
+input.check-menu-bars {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+
+@media screen and (max-width:767px) {
+
+  div.button-menu-bars {
+    display: flex;
+  }
+
+  .nav-content, .list, div.menu-bars {
+    flex-direction: column;
+    
+  }
+
+  .title-nav-content, .list-section, .nav-content, li.nav-item, h1.nav-title, li.nav-section, a.connexion-nav {
+    width: 100%;
+  }
+
+  h1.nav-title {
+    text-align: center;
+  }
+
+  .title-nav-content, div.button-menu-bars {
+    justify-content: center;
+  }
+
+  .menu-bars, label.label-bars {
+    height: $spacing5;
+    width: $spacing5;
+  }
+
+  .menu-bars {
+    border: 2px solid black;
+    border-radius: $spacing;
+  }
+  div.vertical-bars {
+      background-color: black;
+      border: 1px solid;
+      width: $spacing3;
+      height: 4px;
+      display: block;
+      margin: 8px auto;
+  }
+
+  label.label-bars {
+    position: relative;
+    bottom: 53px;
+  }
+
+  input.check-menu-bars:checked + label.label-bars + div.list-section {
+      display: block;
+  }
+  
+}
+
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+  div.list-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  ul.list {
+    flex-direction: row;
+  }
+
+  div.nav-content {
+    flex-direction: column;
+  }
+
+  div.list-section {
+    width: 100%;
+  }
+
+  li.nav-item {
+    width: 25%;
+  }
+
+}
+
+@media screen and (min-width:1024px) {
+
+  nav {
+    height: 72px;
+  }
+
+
+  h1.nav-title {
+    margin: 0;
+  }
+
+  div.list-section {
+    display: block;
+  }
+
+  ul.list {
+    margin: 0;
+  }
+
+  li.nav-connexion {
+    border-right: none;
+  }
+
+  nav, .nav-content, li.nav-section, li.nav-connexion, .section-nav, .connexion-nav, .list {
+    flex-direction: row;
+  }
+
+  .nav-content, h1.nav-title, li.nav-connexion {
+    padding: 0 $spacing2;
+  }
+  
+  li.nav-section {
+    width: 28%;
+    margin: 0 $spacing;
+    border-radius: $spacing;
+  }
+
+  li.nav-connexion {
+    width: 16%;
+    border: 1px;
+    background-color: var(--fifth-color);
+    margin: 0 $spacing;
+    border-radius: $spacing;
+  }
+
+  .title-nav-content {
+    width: 25%;
+  }
+
+  .list-section {
+    width: 75%;
+  }
+  
+}

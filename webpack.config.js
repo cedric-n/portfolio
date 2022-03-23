@@ -35,6 +35,7 @@ Encore
      */
     .addEntry('app', './assets/styles/app.scss')
     .addEntry('nav', './assets/styles/nav.scss')
+    .addEntry('navAdmin', './assets/styles/navAdmin.scss')
     .addEntry('foot', './assets/styles/foot.scss')
     .addEntry('form', './assets/styles/form.scss')
     .addEntry('show', './assets/styles/show.scss')

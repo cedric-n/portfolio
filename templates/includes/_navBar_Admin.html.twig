@@ -1,0 +1,43 @@
+{% block stylesheets %}
+    {{ encore_entry_link_tags('navAdmin') }}
+{% endblock %}
+
+{% block nav %}
+
+    <nav>
+        <div class="nav-content">
+            <div class="title-nav-content">
+                <h1 class="nav-title">ADMINISTRATOR</h1>
+            </div>
+            <div class="button-menu-bars py-2 w-100 text-center">
+                
+                <div class="menu-bars">
+                    <div class="vertical-bars"></div>
+                    <div class="vertical-bars"></div>
+                    <div class="vertical-bars"></div>
+                </div>
+            </div>
+            <input type="checkbox" id="bars" class="check-menu-bars">
+            <label for="bars" class="label-bars"></label>
+            <div class="list-section" id="navbarNav">
+                <ul class="list  navbar-nav w-100">
+                    <li class="nav-item nav-section">
+                        <a class="nav-link section-nav"  href="{{ path('realisation_index')}}">Realisation</a>
+                    </li>
+                    <li class="nav-item nav-section section-seprator">
+                        
+                        <a class="nav-link section-nav"  href="#">Compétence</a>
+                    </li>
+                    <li class="nav-item nav-section">
+                        <a class="nav-link section-nav"  href="#">Expérience</a>
+                    </li>
+                    <li class="nav-item border-none nav-connexion">
+                        <a class="nav-link connexion-nav"  href="#">Connexion</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+{% endblock %}
