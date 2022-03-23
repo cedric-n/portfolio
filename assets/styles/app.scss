@@ -1,4 +1,4 @@
-@import "variables.scss";
+@import './variables.scss';
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@600&display=swap');
 
@@ -14,7 +14,6 @@
 }*/
 
 p,
-a,
 button,
 td,
 th,
@@ -22,6 +21,11 @@ span,
 li
 {
     font-family: 'Roboto', sans-serif;
+}
+
+nav a {
+    font-family: 'Cabin', sans-serif;
+    font-weight: bold;
 }
 
 h1,
@@ -36,3 +40,4 @@ h5
 .button-style {
     background-color: rgba(180,180,180,0.8);
 }
+
