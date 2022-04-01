@@ -1,0 +1,45 @@
+
+{{form_start(form)}}
+
+    <div class="forms">
+        <h2>Création d'une nouvelle compétence</h2>
+        <div class="form-component-row">
+            <div class="errors-form">
+                {{ form_errors(form.name) }}
+            </div>
+            {{ form_label(form.name) }}
+            {{ form_widget(form.name) }}
+        </div>
+
+        <div class="form-component-row">
+            <div class="errors-form">
+                {{ form_errors(form.level) }}
+            </div>
+            {{ form_label(form.level) }}
+            {{ form_widget(form.level) }}
+        </div>
+
+        <div class="form-component-row">
+            <div class="errors-form">
+                {{ form_errors(form.realisations) }}
+            </div>
+            {{ form_label(form.realisations) }}
+            {{ form_widget(form.realisations) }}
+        </div>
+
+        <div class="form-component-row">
+            <div class="errors-form">
+                {{ form_errors(form.description) }}
+            </div>
+            {{ form_label(form.description) }}
+            {{ form_widget(form.description) }}
+        </div>
+
+        <div class="form-button">
+            <button type ="submit" class="button-form">{{ button_label|default('Ajouter') }}</button>
+        </div>
+        {{ form_rest(form) }}
+    </div>
+
+{{ form_end(form)}}
+

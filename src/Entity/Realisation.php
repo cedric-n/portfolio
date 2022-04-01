@@ -5,6 +5,8 @@ namespace App\Entity;
 use App\Repository\RealisationRepository;
 use DateTimeImmutable;
 use DateTimeInterface;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\HttpFoundation\File\File;
@@ -66,6 +68,16 @@ class Realisation
      * @ORM\Column(type="datetime", nullable=true)
      */
     private ?DateTimeInterface $updateAt;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Competence::class, mappedBy="realisations")
+     */
+    private $competences;
+
+    public function __construct()
+    {
+        $this->competences = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -158,6 +170,33 @@ class Realisation
     public function setUpdateAt(?\DateTimeInterface $updateAt): self
     {
         $this->updateAt = $updateAt;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Competence[]
+     */
+    public function getCompetences(): Collection
+    {
+        return $this->competences;
+    }
+
+    public function addCompetence(Competence $competence): self
+    {
+        if (!$this->competences->contains($competence)) {
+            $this->competences[] = $competence;
+            $competence->addRealisation($this);
+        }
+
+        return $this;
+    }
+
+    public function removeCompetence(Competence $competence): self
+    {
+        if ($this->competences->removeElement($competence)) {
+            $competence->removeRealisation($this);
+        }
 
         return $this;
     }

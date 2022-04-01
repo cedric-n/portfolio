@@ -2,7 +2,7 @@
     {{ encore_entry_link_tags('form') }}
 {% endblock %}
 
-{{ form_start(form) }}
+{#{{ form_start(form) }}
     <div class="row">
         <div class="col d-flex flex-column my-2">
             {{ form_label(form.name) }}
@@ -35,3 +35,5 @@
     </div>
     <button class="btn">{{ button_label|default('Ajouter') }}</button>
 {{ form_end(form) }}
+#}
+{{form(form)}}

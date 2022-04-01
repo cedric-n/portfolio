@@ -1,0 +1,75 @@
+{% extends 'adminBase.html.twig' %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('table-index') }}
+{% endblock %}
+
+{% block body %}
+
+    <table class="table">
+        <thead>
+            <tr class="first-head">
+                <th id="title-head-1" class="title-head" colspan="3">Competence index</th>
+                <th id="title-head-2" class="title-head" colspan="4">Competence index</th>
+                <th>
+                    <div>
+
+                        <div class="button-add">
+                            <a href="{{ path('competence_new') }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="30" height="30"><path d="M23,11H13V1a1,1,0,0,0-1-1h0a1,1,0,0,0-1,1V11H1a1,1,0,0,0-1,1H0a1,1,0,0,0,1,1H11V23a1,1,0,0,0,1,1h0a1,1,0,0,0,1-1V13H23a1,1,0,0,0,1-1h0A1,1,0,0,0,23,11Z"/></svg>
+                                <span>Ajout</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </th>
+            </tr>
+            <tr class="second-head">
+                <th >Id</th>
+                <th>Name</th>
+                <th class="priority-1">Description</th>
+                <th>Level</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for competence in competences %}
+            <tr class="content-table">
+                <td class="table-cell-id">{{ competence.id }}</td>
+                <td class="text-table-format">{{ competence.name }}</td>
+                <td class="priority-1 text-table-format">{{ competence.description }}</td>
+                <td class="text-table-format">{{ competence.level }}</td>
+                <td class="table-content-button">
+
+                    <div class="display-table-action">
+
+                        <div class="button-show">
+                            <a href="{{ path('competence_show', {'id': competence.id}) }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
+                                    <g id="_01_align_center" data-name="01 align center"><path d="M23.821,11.181v0C22.943,9.261,19.5,3,12,3S1.057,9.261.179,11.181a1.969,1.969,0,0,0,0,1.64C1.057,14.739,4.5,21,12,21s10.943-6.261,11.821-8.181A1.968,1.968,0,0,0,23.821,11.181ZM12,19c-6.307,0-9.25-5.366-10-6.989C2.75,10.366,5.693,5,12,5c6.292,0,9.236,5.343,10,7C21.236,13.657,18.292,19,12,19Z"/><path d="M12,7a5,5,0,1,0,5,5A5.006,5.006,0,0,0,12,7Zm0,8a3,3,0,1,1,3-3A3,3,0,0,1,12,15Z"/></g>
+                                </svg>
+                                <span>show</span>
+                            </a>
+                        </div>
+                        
+
+                        <div class="button-edit">
+                            <a   href="{{ path('competence_edit', {'id': competence.id}) }}">
+                                <svg xmlns="http://www.w3.org/2000/svg" id="Outline" viewBox="0 0 24 24" width="30" height="30"><path d="M18.656.93,6.464,13.122A4.966,4.966,0,0,0,5,16.657V18a1,1,0,0,0,1,1H7.343a4.966,4.966,0,0,0,3.535-1.464L23.07,5.344a3.125,3.125,0,0,0,0-4.414A3.194,3.194,0,0,0,18.656.93Zm3,3L9.464,16.122A3.02,3.02,0,0,1,7.343,17H7v-.343a3.02,3.02,0,0,1,.878-2.121L20.07,2.344a1.148,1.148,0,0,1,1.586,0A1.123,1.123,0,0,1,21.656,3.93Z"/><path d="M23,8.979a1,1,0,0,0-1,1V15H18a3,3,0,0,0-3,3v4H5a3,3,0,0,1-3-3V5A3,3,0,0,1,5,2h9.042a1,1,0,0,0,0-2H5A5.006,5.006,0,0,0,0,5V19a5.006,5.006,0,0,0,5,5H16.343a4.968,4.968,0,0,0,3.536-1.464l2.656-2.658A4.968,4.968,0,0,0,24,16.343V9.979A1,1,0,0,0,23,8.979ZM18.465,21.122a2.975,2.975,0,0,1-1.465.8V18a1,1,0,0,1,1-1h3.925a3.016,3.016,0,0,1-.8,1.464Z"/>
+                                </svg>
+                                <span>edit</span>
+                            </a>
+                        </div>
+                        
+                    </div>
+                    
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

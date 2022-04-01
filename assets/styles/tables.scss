@@ -1,0 +1,160 @@
+@import './app.scss';
+
+/* display, positoning and text formatage */
+
+th, td, tr {
+    text-align: center;
+    border: none;
+}
+
+tr.first-head th {
+    height: 64px;
+    vertical-align: middle;
+    background-color: var(--fifth-color);
+}
+
+tr.second-head th {
+    height: 56px;
+    vertical-align: middle;
+    background-color: var(--fourth-color);
+}
+
+
+tr.content-table td {
+    height: 48px;
+    vertical-align: middle;
+}
+
+tr.content-table td:hover {
+    padding: $spacing2 $spacing;
+}
+
+.title-head {
+    font-size: $spacing4;
+}
+
+.text-table-format {
+    font-size: 18px;
+}
+
+.table-cell-id {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+td.priority-1, th.priority-1, #title-head-2 {
+    display: none;
+}
+
+/* styles button on table */
+.button-add {
+    display: flex;
+    height: 48px;
+    width: 122px;
+    border-radius: $spacing;
+    background-color: var(--first-color);
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.button-show {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 122px;
+    background-color: #c4edc8;
+    border-radius: $spacing;
+    margin: $spacing 12px;
+}
+
+.button-edit {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 122px;
+    background-color: #e9edc4;
+    border-radius: $spacing;
+    margin: $spacing 12px;
+}
+
+.button-show a, .button-edit a, .button-add a{
+    width: 100%;
+    color: var(--fourth-color);
+    font-weight: bold;
+}
+
+.button-show a:hover, .button-edit a:hover {
+    color: var(--fifth-color);
+}
+
+
+.button-add span {
+    color: var(--fourth-color);
+}
+
+tr.first-head th.title-head, tr.second-head th {
+    color: var(--second-color);
+    font-weight: bold;
+}
+
+tr.second-head th {
+    font-size: 20px;
+}
+
+
+tr.content-table:nth-child(2n+1) {
+    background-color: var(--second-color);
+}
+
+tr.content-table:nth-child(2n) {
+    background-color: var(--first-color);
+}
+
+
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+
+    table.table {
+        width: 80%;
+        margin: $spacing5 auto 0 auto;
+    }
+
+    td.priority-1, th.priority-1, #title-head-2 {
+        display: table-cell;
+    }
+
+    #title-head-1 {
+        display: none;
+    }
+
+}
+
+
+@media screen and (min-width:1024px) {
+
+    td.priority-1, th.priority-1, #title-head-2 {
+        display: table-cell;
+    }
+
+    #title-head-1 {
+        display: none;
+    }
+
+    table.table {
+        width: 80%;
+        margin: $spacing5 auto 0 auto;
+    }
+
+    div.display-table-action {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}
