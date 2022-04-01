@@ -1,20 +1,99 @@
 @import "app.scss";
 
+
 form {
-  width:50%;
-  margin: 0 auto;
-  padding: $spacing2;
-  background-color: white;
+    margin-top: 32px;
+}
+
+div.forms {
+    display: block;
+    margin: 0 auto;
+    background-color: var(--first-color);
+    max-width: 800px;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+div.forms div {
+    margin: 16px;
+}
+
+div.forms div label {
+    display: block;
+}
+
+h2 {
+
+    width: 100%;
+    height: 100%;
+    background-color: var(--fourth-color);
+    padding: 4px 8px;
+    margin: 4px auto;
+    border-radius: $spacing $spacing 0 0;
+    text-align: center;
+    color: var(--first-color);
 }
 
 input, textarea {
-  border-radius: 4px;
+    width: 100%;
 }
 
-label {
-  font-weight: bold;
+select {
+    width: 50%;
+    text-align: center;
 }
-
+    
 textarea {
-  height: 120px
+    height: 180px;
+}
+
+input, select, textarea {
+    border-radius: 8px;
+}
+
+button.button-form {
+    border-radius: $spacing;
+    background-color: var(--fourth-color);
+    padding: 4px $spacing;
+}
+
+.form-button {
+    text-align: right;
+}
+
+.form-button:hover {
+    text-decoration: underline;
+}
+
+.content-button-back {
+    width: 100%;
+    margin-top: $spacing2;
+    margin-left: $spacing2;
+}
+
+.link-back {
+    text-decoration: none;
+    color: var(--fourth-color);
+    border-radius: $spacing;
+    background-color: var(--second-color);
+    padding: 4px $spacing;
+}
+
+.link-back:hover {
+    color: var(--fifth-color);
+    text-decoration: underline;
+    font-size: large;
+    background-color: var(--third-color);
+}
+
+@media screen and (max-width: 767px) {
+    
+    div.forms, h2 {
+        border-radius: 0;
+        border: none;
+    }
+
+    .form-button {
+        padding-bottom: $spacing2;
+    }
 }

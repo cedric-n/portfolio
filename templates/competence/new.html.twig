@@ -1,0 +1,17 @@
+{% extends 'adminBase.html.twig' %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('form') }}
+{% endblock %}
+
+{% block title %}New Competence{% endblock %}
+
+{% block form %}
+
+    {{ include('competence/_form.html.twig') }}
+
+    <div class="content-button-back">
+        <a class="link-back" href="{{ path('competence_index') }}">back to list</a>
+    </div>
+    
+{% endblock %}
