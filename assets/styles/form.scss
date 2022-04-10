@@ -71,21 +71,6 @@ button.button-form {
     margin-left: $spacing2;
 }
 
-.link-back {
-    text-decoration: none;
-    color: var(--fourth-color);
-    border-radius: $spacing;
-    background-color: var(--second-color);
-    padding: 4px $spacing;
-}
-
-.link-back:hover {
-    color: var(--fifth-color);
-    text-decoration: underline;
-    font-size: large;
-    background-color: var(--third-color);
-}
-
 @media screen and (max-width: 767px) {
     
     div.forms, h2 {

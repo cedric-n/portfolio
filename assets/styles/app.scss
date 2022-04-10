@@ -5,14 +5,8 @@
 :root {
     box-sizing: border-box;
 }
-/*body {
-    background-image: url("../images/banner.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center;
-}*/
 
+a,
 p,
 button,
 td,
@@ -45,3 +39,28 @@ a {
     text-decoration: none;
 }
 
+a.link-back {
+    text-decoration: none;
+    color: var(--fourth-color);
+    border-radius: $spacing;
+    border: 2px outset var(--second-color);
+    background-color: var(--third-color);
+    padding: 4px $spacing;
+    margin: $spacing2 $spacing4;
+}
+
+a.link-back:hover {
+    text-decoration: underline;
+    border-color: var(--third-color);
+    background-color: var(--fourth-color);
+    color: var(--first-color);
+}
+
+a.link-back:active {
+    border-style: inset;
+}
+
+body {
+    background: rgb(0,212,255);
+    background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(24,49,82,1) 52%, rgba(2,0,36,1) 100%);
+}
