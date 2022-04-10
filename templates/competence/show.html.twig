@@ -1,11 +1,14 @@
-{% extends 'base.html.twig' %}
+{% extends 'adminBase.html.twig' %}
+
+{% block stylesheets %}
+            {{ encore_entry_link_tags('show') }}
+{% endblock %}
 
 {% block title %}Competence{% endblock %}
 
 {% block body %}
-    <h1>Competence</h1>
 
-    <table class="table">
+   <!-- <table class="table">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -25,10 +28,76 @@
             </tr>
         </tbody>
     </table>
+    !-->
 
-    <a href="{{ path('competence_index') }}">back to list</a>
+    <div class="grid-container-show">
 
-    <a href="{{ path('competence_edit', {'id': competence.id}) }}">edit</a>
+        <div class="item-show-1 item-display">
+            <div class="main-header">
+                <h2>Competence : {{ competence.name }}</h2>
+            </div>
+        </div>
 
-    {{ include('competence/_delete_form.html.twig') }}
+        <div class="item-show-8">
+            <div>
+                <img id="img-competence" src="{{ asset('build/images/php.png')}}" alt="php img"/>
+            </div>
+        </div>
+
+        <div class="item-show-2 item-display">
+            <div class="secondary-header">
+                <h3>n° Id</h3>
+            </div>
+        </div>
+
+        <div class="item-show-3 item-display">
+            <div class="content-text">
+                <p>{{ competence.id }}</p>
+            </div>
+        </div>
+
+        <div class="item-show-4 item-display">
+            <div class="secondary-header">
+                <h3>Niveau</h3>
+            </div>
+        </div>
+
+        <div class="item-show-5 item-display">
+            <div class="content-text">
+                <p>{{ competence.level }}</p>
+            </div>
+        </div>
+.
+        <div class="item-show-6 item-display">
+            <div class="secondary-header">
+                <h3>Description</h3>
+            </div>
+        </div>
+
+        <div class="item-show-7 item-display">
+            <div class="content-text content-description">
+                <p>{{ competence.description }}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-buttons">
+        <div class="button-edit">
+            <a href="{{ path('competence_edit', {'id': competence.id}) }}">Modifier</a>
+        </div>
+
+        <div class="button-delete">
+            {{ include('competence/_delete_form.html.twig') }}
+        </div>
+    </div>
+
+    <div>
+        <a class="link-back" href="{{ path('competence_index') }}">back to list</a>
+    </div>
+
+    
+        
+
+        
+    
 {% endblock %}

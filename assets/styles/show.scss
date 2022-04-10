@@ -1,14 +1,182 @@
 @import "app.scss";
 
-table.table {
+.grid-container-show {
+  display: grid;
+  margin: 16px 0;
+}
+
+.secondary-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.secondary-header > h3 {
+  margin: 0;
+}
+
+.grid-container-show > div {
+  text-align: center;
+}
+
+.main-header {
+  height: 72px;
+  background-color: var(--fourth-color);
+}
+
+.main-header h2 {
+  color: var(--first-color);
+}
+
+.secondary-header {
+  height: 40px;
+  background-color: var(--third-color);
+}
+
+.content-text {
+  margin: $spacing $spacing2;
+}
+.content-text p{
+  margin: 0;
+  color: var(--first-color);
+}
+
+.content-description {
+  overflow: scroll;
+  height: 240px;
+}
+
+.content-description p {
+  margin: 0 $spacing2;
+}
+
+ #img-competence {
+   max-width: 100%;
+   height:  auto;
+ }
+
+ .item-show-8 {
+   margin: $spacing4;
+ }
+
+ .content-buttons {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
+.button-delete {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 80%;
+  height: $spacing5;
+  margin-bottom: $spacing2;
+  border-radius: $spacing;
+  border: 4px outset var(--second-color);
+  width: 80%;
+ }
+
+.button-delete-text {
+  background-color: var(--third-color);
+  border: none;
+}
+
+.button-delete-text,  .button-delete form{
+  width: 100%;
+  height: 100%;
+}
+
+.button-delete-text:hover {
+  background-color: #813737;
+  color: var(--first-color);
+}
+
+.button-delete:hover {
+  border-color: #e2abab;
+}
+
+.button-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: $spacing5;
+  margin-bottom: $spacing2;
+  border-radius: $spacing;
+  border: 4px outset var(--second-color);
+  background-color: var(--third-color);
+  width: 80%;
+}
+
+.button-edit:hover, .button-edit a:hover {
+  background-color: #37813b;
+  border-color: #abe2ae;
+  color: var(--first-color);
+}
+
+.button-edit:active, .button-delete:active {
+  border-style: inset;
+}
+
+.button-edit a {
+  width: 100%;
   margin: 0 auto;
 }
 
-td, th {
-  border: 0 solid;
-}
+.button-edit a, .button-delete-text {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  color: black;
+ }
 
-img {
-  width: $spacing3 * 10;
-}
+ a.link-back {
+  margin: $spacing2 0 0 $spacing2;
+ }
+
+ @media screen and (min-width:1024px) {
+
+  .grid-container-show {
+    width: 80%;
+    margin: $spacing5 auto $spacing2 auto;
+    background: linear-gradient(to bottom, hsla(208, 49%, 78%, 0.5) 0%, 	hsla(228, 71%, 93%, 0.5) 50%, hsla(208, 49%, 78%, 0.5) 100%);
+  }
+
+  .item-show-8 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 8;
+  }
+
+  .content-buttons {
+    flex-direction: row;
+    width: 80%;
+    margin: 16px auto;
+  }
+
+  .button-edit {
+    width: 25vh;
+    margin-right: $spacing2;
+    margin-bottom: 0;
+  }
+
+  .button-delete-text {
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .button-delete {
+    width: 25vh;
+    margin-left: $spacing2;
+    margin-bottom: 0;
+  }
+
+  a.link-back {
+    margin-left: $spacing4;
+  }
+
+ }
