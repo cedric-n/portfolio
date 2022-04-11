@@ -2,16 +2,16 @@
 
 
 form {
-    margin-top: 32px;
+    margin: 56px 0 $spacing5 0;
 }
 
 div.forms {
     display: block;
     margin: 0 auto;
-    background-color: var(--first-color);
+    background-color: hsla(212.2,53.2%,84.9%,0.5);
     max-width: 800px;
     border-radius: 8px;
-    border: 1px solid black;
+    border: 4px inset var(--first-color);
 }
 
 div.forms div {
@@ -29,7 +29,7 @@ h2 {
     background-color: var(--fourth-color);
     padding: 4px 8px;
     margin: 4px auto;
-    border-radius: $spacing $spacing 0 0;
+    border-radius: 2px 2px 0 0;
     text-align: center;
     color: var(--first-color);
 }
@@ -69,6 +69,11 @@ button.button-form {
     width: 100%;
     margin-top: $spacing2;
     margin-left: $spacing2;
+}
+
+.contents-control-user {
+    margin-top: $spacing2;
+    margin-left: $spacing4;
 }
 
 @media screen and (max-width: 767px) {
