@@ -2,7 +2,7 @@
 {{form_start(form)}}
 
     <div class="forms">
-        <h2>Création d'une nouvelle compétence</h2>
+        <h2>{{ header_label|default('Création d\'une nouvelle compétence') }}</h2>
         <div class="form-component-row">
             <div class="errors-form">
                 {{ form_errors(form.name) }}
